@@ -7,6 +7,12 @@ server:
   port: 0
 
 spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3307/ordermsa?useSSL=false&allowPublicKeyRetrieval=true
@@ -26,3 +32,7 @@ spring:
         show_sql: true
         format_sql: true
     open-in-view: false
+
+  cloud:
+    bus:
+      enabled: true
